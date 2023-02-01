@@ -3,7 +3,7 @@
 
 # CrowdStrike LogScale ingester for Event Hubs
 
-Event Hubs are data/event investers which can be integrated with functions and services (Azure internal and external).  
+Event Hubs are data/event ingesters which can be integrated with functions and services (Azure internal and external).  
 As Event Hubs are often used as temporary storage of data/events, we can utilize Azure Logic Apps to forward the data/events to CrowdStrike LogScale for storage, analytics, or other purposes.  
 ## Set Up ##
 
@@ -34,9 +34,9 @@ Each Event Hub instance to be ingested into LogScale requires a separate Workflo
 For the Trigger, we are utilizing the "Event Hub" Trigger in the "Azure" tab.  
 ![WorkflowTrigger](docs/asset/WorkflowTrigger.png)
 ![WorkflowTrigger2](docs/asset/WorkflowTrigger2.png)  
-The trigger requires a connection with an Event Hub Namespace via the Connection String . The Connection String can be found after creating a Shared Access Policy within the Event Hub after adding an access policy in the "Shared access policies" tab with the "Listen" claim. The "Connection string–primary key" will be generated and can be used for the Workflow tirgger.  
+The trigger requires a connection with an Event Hub Namespace via the Connection String . The Connection String can be found after creating a Shared Access Policy within the Event Hub after adding an access policy in the "Shared access policies" tab with the "Listen" claim. The "Connection string–primary key" will be generated and can be used for the Workflow trigger.  
 ![ConnectEventHub](docs/asset/ConnectEventHub.png)  
-After the Event Hub Namespace is connected, the trigger can be set up with a Event Hub Instance from the dropdown list, with the Content Type "application/json", the default Consumer  group name, Maximum Event Conut set to "175" and the interval to check for new events being "1 Second.  
+After the Event Hub Namespace is connected, the trigger can be set up with an Event Hub Instance from the dropdown list, with the Content Type "application/json", the default Consumer  group name, Maximum Event Count set to "175" and the interval to check for new events being "1 Second.  
 ![TriggerSettings](docs/asset/TriggerSettings.png)  
 In the settings tab of the Trigger, turn off "Split On" as shown in the screenshot below.  
 ![TriggerSettings2](docs/asset/TriggerSettings2.png)  
