@@ -19,7 +19,7 @@ The following script can be copied and pasted for the custom parser:
 
 ```
 parseJson(@rawstring)
-| split("records", strip=true) // Split into individual events 
+| split("ContentData.records", strip=true) // Split into individual events
 | drop([@rawstring, _index]) // Clean up
 ```
 
