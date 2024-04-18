@@ -3,6 +3,8 @@
 
 # CrowdStrike LogScale ingester for Event Hubs
 
+**The LogScale Azure Event Hub Collector is an open source project and not a CrowdStrike product. As such, it carries no formal support, expressed, or implied.** 
+
 Event Hubs are data/event ingesters which can be integrated with functions and services (Azure internal and external).  
 As Event Hubs are often used as temporary storage of data/events, we can utilize Azure Logic Apps to forward the data/events to CrowdStrike LogScale for storage, analytics, or other purposes.  
 ## Set Up ##
